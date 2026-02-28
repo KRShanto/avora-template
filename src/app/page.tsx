@@ -7,6 +7,7 @@ import MenuEight from "@/components/Header/Menu/MenuEight";
 import SliderTen from "@/components/Slider/SliderTen";
 import TrendingNow from "@/components/Home11/TrendingNow";
 import TrendingProduct from "@/components/Home3/TrendingProduct";
+import CategoryProducts from "@/components/Home3/CategoryProducts";
 
 export const metadata = {
   title: "Home page",
@@ -25,6 +26,7 @@ export default function Home() {
       </div>
       <TrendingNow />
       <TrendingProduct data={productData} start={12} limit={20} />
+      <CategoryProducts data={productData} start={0} limit={8} />
       <Benefit props="md:py-20 py-10" />
       <Footer />
     </>
