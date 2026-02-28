@@ -472,21 +472,14 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                 <div className="list-color-image max-md:hidden flex items-center gap-2 flex-wrap duration-500">
                   {data.variation.map((item, index) => (
                     <div
-                      className={`color-item w-8 h-8 rounded-lg duration-300 relative ${activeColor === item.color ? "active" : ""}`}
+                      className={`color-item w-6 h-6 rounded-full duration-300 relative ${activeColor === item.color ? "active" : ""}`}
+                      style={{ backgroundColor: `${item.colorCode}` }}
                       key={index}
                       onClick={(e) => {
                         e.stopPropagation();
                         handleActiveColor(item.color);
                       }}
                     >
-                      <Image
-                        src={item.colorImage}
-                        width={100}
-                        height={100}
-                        alt="color"
-                        priority={true}
-                        className="w-full h-full object-cover rounded-lg"
-                      />
                       <div className="tag-action bg-black text-white caption2 capitalize px-1.5 py-0.5 rounded-sm">
                         {item.color}
                       </div>
@@ -616,7 +609,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                           {data.variation.map((item, index) => (
                             <div
                               key={index}
-                              className={`color-item w-8 h-8 rounded-full duration-300 relative`}
+                              className={`color-item w-6 h-6 rounded-full duration-300 relative`}
                               style={{ backgroundColor: `${item.colorCode}` }}
                             >
                               <div className="tag-action bg-black text-white caption2 capitalize px-1.5 py-0.5 rounded-sm">
@@ -633,21 +626,16 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                               <div className="list-color flex items-center gap-2 flex-wrap mt-5">
                                 {data.variation.map((item, index) => (
                                   <div
-                                    className={`color-item w-12 h-12 rounded-xl duration-300 relative ${activeColor === item.color ? "active" : ""}`}
+                                    className={`color-item w-6 h-6 rounded-full duration-300 relative ${activeColor === item.color ? "active" : ""}`}
+                                    style={{
+                                      backgroundColor: `${item.colorCode}`,
+                                    }}
                                     key={index}
                                     onClick={(e) => {
                                       e.stopPropagation();
                                       handleActiveColor(item.color);
                                     }}
                                   >
-                                    <Image
-                                      src={item.colorImage}
-                                      width={100}
-                                      height={100}
-                                      alt="color"
-                                      priority={true}
-                                      className="rounded-xl"
-                                    />
                                     <div className="tag-action bg-black text-white caption2 capitalize px-1.5 py-0.5 rounded-sm">
                                       {item.color}
                                     </div>
