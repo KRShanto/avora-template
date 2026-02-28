@@ -32,7 +32,6 @@ export default function Home() {
       <Instagram />
       <Brand />
       <Footer />
-      <ModalNewsletter />
     </>
   )
 }
