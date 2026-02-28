@@ -13,6 +13,11 @@ import Brand from "@/components/Home1/Brand";
 import Footer from "@/components/Footer/Footer";
 import MenuEight from "@/components/Header/Menu/MenuEight";
 import SliderTen from "@/components/Slider/SliderTen";
+import TrendingNow from "@/components/Home11/TrendingNow";
+
+export const metadata = {
+  title: "Home page",
+};
 
 export default function Home() {
   return (
@@ -25,7 +30,7 @@ export default function Home() {
         <MenuEight />
         <SliderTen />
       </div>
-      <WhatNewOne data={productData} start={0} limit={4} />
+      <TrendingNow />
       <Collection />
       <TabFeatures data={productData} start={0} limit={6} />
       <Banner />
