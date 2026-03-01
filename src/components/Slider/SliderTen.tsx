@@ -18,7 +18,7 @@ const SliderTen = () => {
             slidesPerView={1}
             loop={true}
             pagination={{ clickable: true }}
-            modules={[Pagination]}
+            modules={[Pagination, Autoplay]}
             className="h-full relative"
             autoplay={{
               delay: 4000,
